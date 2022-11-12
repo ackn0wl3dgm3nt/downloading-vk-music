@@ -1,0 +1,3 @@
+browser=chrome
+driver_path=C:\SeleniumDrivers\chromedriver\chromedriver.exe
+output_dir=%homepath%\Downloads\VK Music

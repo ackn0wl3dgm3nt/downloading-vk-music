@@ -1,7 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver import ChromeOptions
+from msedge.selenium_tools import Edge, EdgeOptions
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from progress.counter import Counter
@@ -24,17 +25,23 @@ class Downloading:
         args = {}
         if self.driver_path != "":
             args["executable_path"] = self.driver_path
+        prefs = {
+            "download.default_directory": self.download_path,
+            "download.prompt_for_download": False
+        }
         if self.browser == "chrome":
-            chrome_options = Options()
+            chrome_options = ChromeOptions()
             chrome_options.add_argument("--log-level=3")
             chrome_options.add_argument("--disable-notification")
-            prefs = {
-                "download.default_directory": self.download_path,
-                "download.prompt_for_download": False
-            }
             chrome_options.add_experimental_option("prefs", prefs)
             args["options"] = chrome_options
             self.driver = webdriver.Chrome(**args)
+        elif self.browser == "edge":
+            edge_options = EdgeOptions()
+            edge_options.use_chromium = True
+            edge_options.add_experimental_option("prefs", prefs)
+            args["options"] = edge_options
+            self.driver = Edge(**args)
         else:
             raise Exception("Browser are not supported")
         self.driver.get("https://vrit.me/settings")

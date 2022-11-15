@@ -1,3 +1,4 @@
+msedge-selenium-tools==3.141.4
 progress==1.6
 selenium==4.4.3
 webdriver-manager==3.8.3

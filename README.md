@@ -1,37 +1,52 @@
 # downloading-vk-music
-Программа, которая позволит вам скачать всю музыку из вашего профиля ВК с помощью сервиса vrit.me под управлением Python + Selenium и при желании рассортировать по папкам с исполнителями
+Программа, которая может вам скачать всю музыку из вашего профиля ВКонтакте с помощью библиотеки selenium и сервиса vrit.me
 
-## Установка
-Перед установкой данной программы у вас должны быть установлены: Python версии 3, Selenium driver для вашего браузера
+Поддержка браузеров: Chrome, Edge
 
-> Установка в виртуальное окружение (необязательно):
->
-> $ python -m venv venv - создание виртуального окружения
+## Требования:
+- Python 3.0+
+- Selenium driver для используемого браузера
+
+## Установка:
+> Создание виртуального окружения (необязательно):
+>> `$ python -m venv venv`
 >
 > Активация:
->
->> $ venv\Scripts\activate.bat - для Windows
+>> `$ venv\Scripts\activate.bat` - для Windows
 >>
->> $ source venv/bin/activate -  для Linux и MacOS
+>> `$ source venv/bin/activate` -  для Linux и MacOS
+>
+> Деактивация:
+>
+>> `$ deactivate`
 
-> $ pip install -r requirements.txt
+> Клонирование репозитория
+>> `$ git clone https://github.com/ackn0wl3dgm3nt/downloading-vk-music`
 
-## Использование
+> Установка необходимых пакетов python
+>> `$ pip install -r requirements.txt`
+
+> Установка Selenium драйвера (скачивайте версию драйвера с такой же версией, как и ваш браузер!)
+>> Chrome: https://chromedriver.chromium.org/downloads
+>
+>> Edge: https://developer.microsoft.com/ru-ru/microsoft-edge/tools/webdriver/
+
+## Использование:
 ### Настройка config.txt
-> browser=chrome (по умолчанию) - Браузер для запуска selenium
+> `browser=chrome` - Браузер для запуска selenium
 >
-> driver_path=C:\SeleniumDrivers\chromedriver\chromedriver.exe - путь до selenium драйвера. Если вы используете PATH, оставьте параметр пустым
+> `driver_path=C:\SeleniumDrivers\chromedriver\chromedriver.exe` - путь до selenium драйвера. Если вы используете PATH, оставьте параметр пустым
 >
-> output_dir=%homepath%\Downloads\VK Music (по умолчанию) - директория, куда по завершению программы будут перенесены скачанные треки
+> `output_dir=%homepath%\Downloads\VK Music` - директория, где по завершению программы будут находится скачанные треки. Для Linux замените `%homepath%` на `~`
 ### Запуск
-> $ python main.py
+> `$ python main.py`
 
-> Введите ваш полный url профиля ВК >>
+> *Введите ваш полный url профиля ВК >>*
 >
-> Рассортировать треки? (Да/Нет) >>
+> *Рассортировать треки? (Да/Нет) >>*
 >
-> Удалять треки более 9:59 по времени? (Да/Нет) >>
+> *Удалять треки более 9:59 по времени? (Да/Нет) >>*
 
 При экстренном завершении программы её можно запустить заново и выполнение программы продолжится с того места, где она была завершена
-> Продолжить выполнение программы? (Да/Нет) >>
+> *Продолжить выполнение программы? (Да/Нет) >>*
 

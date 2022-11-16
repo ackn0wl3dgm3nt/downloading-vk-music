@@ -8,8 +8,19 @@
 - Selenium driver для используемого браузера
 
 ## Установка:
+> Клонирование репозитория
+>> `$ git clone https://github.com/ackn0wl3dgm3nt/downloading-vk-music`
+
 > Создание виртуального окружения (необязательно):
->> `$ python -m venv venv`
+>> `$ python -m venv venv` - для Windows
+>
+>> Для Linux:
+>>
+>> `$ sudo apt install python3-venv`
+>> 
+>>`$ python3 -m venv venv`
+>>
+>>
 >
 > Активация:
 >> `$ venv\Scripts\activate.bat` - для Windows
@@ -19,9 +30,6 @@
 > Деактивация:
 >
 >> `$ deactivate`
-
-> Клонирование репозитория
->> `$ git clone https://github.com/ackn0wl3dgm3nt/downloading-vk-music`
 
 > Установка необходимых пакетов python
 >> `$ pip install -r requirements.txt`
@@ -37,7 +45,7 @@
 >
 > `driver_path=C:\SeleniumDrivers\chromedriver\chromedriver.exe` - путь до selenium драйвера. Если вы используете PATH, оставьте параметр пустым
 >
-> `output_dir=%homepath%\Downloads\VK Music` - директория, где по завершению программы будут находится скачанные треки. Для Linux замените `%homepath%` на `~`
+> `output_dir=%homepath%\Downloads\VK Music` - директория, где по завершению программы будут находиться скачанные треки. Для Linux замените `%homepath%` на `~`
 ### Запуск
 > `$ python main.py`
 

@@ -34,7 +34,7 @@
 > Установка необходимых пакетов python
 >> `$ pip install -r requirements.txt`
 
-> Установка Selenium драйвера (скачивайте версию драйвера с такой же версией, как и ваш браузер!)
+> Установка Selenium драйвера (версия драйвера должна соответствовать версии браузера!)
 >> Chrome: https://chromedriver.chromium.org/downloads
 >
 >> Edge: https://developer.microsoft.com/ru-ru/microsoft-edge/tools/webdriver/
